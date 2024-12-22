@@ -1,0 +1,107 @@
+body {
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Racama', sans-serif;
+}
+
+/* Контейнер для центрирования */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Стили для заголовка */
+h1.header-text {
+    width: 100%;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 24px; /* Уменьшенный размер шрифта */
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+}
+
+/* Стили для абзацев */
+.paragraph {
+    width: 90%;
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Отступ снизу */
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+    position: relative;
+}
+
+.paragraph p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.paragraph .note-button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.paragraph .note-button input {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+}
+
+.paragraph .note-button .note-btn {
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+}
+
+/* Стили для кнопок */
+.btn {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #354C78;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    margin-top: 20px; /* Отступ сверху */
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+}
+
+.btn:hover {
+    background-color: #2a3e5f;
+}

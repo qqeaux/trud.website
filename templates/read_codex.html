@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трудовой кодекс РФ</title>
+    <link rel="stylesheet" href="">
+    <link href="https://fonts.googleapis.com/css2?family=Racama&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header-text">Трудовой кодекс РФ</h1>
+        <form method="POST" action="{{ url_for('save_notes') }}">
+            {% for paragraph in paragraphs %}
+                <div class="paragraph">
+                    <p>{{ paragraph }}</p>
+                    <div class="note-button">
+                        <input type="text" name="{{ loop.index }}" placeholder="Ваша отметка">
+                        <button type="button" class="note-btn">Оставить отметку</button>
+                    </div>
+                </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-primary">Сохранить отметки</button>
+        </form>
+        <a href="{{ url_for('codex') }}" class="btn btn-primary" id="backButton">Назад</a>
+    </div>
+    <script>
+        document.querySelectorAll('.note-btn').forEach(button => {
+            button.addEventListener('mouseover', function() {
+                this.style.backgroundColor = 'yellow';
+            });
+            button.addEventListener('mouseout', function() {
+                this.style.backgroundColor = '';
+            });
+        });
+    </script>
+</body>
+</html>

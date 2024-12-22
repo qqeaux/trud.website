@@ -1,0 +1,111 @@
+body {
+    background-image: url(../img/bg.png);
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Racama', sans-serif;
+}
+
+/* Контейнер для центрирования */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Стили для заголовка */
+h1 {
+    margin-bottom: 40px; /* Увеличенный отступ между заголовком и кнопками */
+    font-size: 48px; /* Увеличенный размер текста */
+    color: white; /* Белый цвет текста */
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+    position: relative;
+    top: -20px; /* Поднять текст немного выше */
+}
+
+/* Стили для кнопок */
+.btn-group {
+    display: flex;
+    gap: 20px; /* Увеличенный интервал между кнопками */
+    transition: gap 0.5s ease-in-out; /* Плавное изменение интервала */
+}
+
+.btn {
+    padding: 20px 40px; /* Увеличенные отступы */
+    font-size: 24px; /* Увеличенный размер текста */
+    background-color: #354C78; /* Новый цвет кнопок */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Скругленные углы */
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out; /* Плавное изменение цвета и ширины */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для объемности */
+    margin: 0; /* Убираем промежутки между кнопками */
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    background-color: #2a3e5f; /* Цвет при наведении */
+}
+
+/* Стили для кнопки поиска */
+#searchButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1s ease-in-out; /* Плавное изменение ширины */
+}
+
+#searchButton.expanded {
+    width: 400px; /* Увеличенная ширина */
+}
+
+.search-text {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.search-text.hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.search-input {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px; /* Овальное окошко */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Racama', sans-serif; /* Шрифт Racama */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-input.visible {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Стили для других кнопок */
+#codexButton, #favoritesButton {
+    transition: transform 0.5s ease-in-out; /* Плавное сдвигание */
+}
+
+.btn-group.expanded {
+    gap: 20px; /* Небольшой интервал между кнопками */
+}
+
+#codexButton.shifted, #favoritesButton.shifted {
+    transform: translateX(10px); /* Сдвиг вправо */
+}
